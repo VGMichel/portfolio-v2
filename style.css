@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@500;600&family=Roboto+Mono:wght@200;300;500&display=swap");
+
+/* Variables */
+:root {
+  --primary-color: #afd5aa;
+  --secondary-color: #12100e;
+  --tert-color: #403d39;
+  --bg-color: #f0f2ef;
+
+  --mono: "Roboto Mono", sans-serif;
+  --montserrat: "Montserrat", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
+/* GLOBAL STYLES*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--mono);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.button {
+  margin-top: 3rem;
+  gap: 2rem;
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.5rem;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 10vw, 8rem);
+  text-transform: uppercase;
+  font-family: var(--montserrat);
+  letter-spacing: 0.2rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10rem;
+}
+
+.section-heading::before {
+  content: attr(data-outline);
+  position: absolute;
+  left: 2%;
+  top: -20%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--montserrat);
+  letter-spacing: 0.2rem;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--primary-color);
+  z-index: -1;
+}
+
+/* Hero Section */
+#hero {
+  height: 100vh;
+  width: 100%;
+  padding-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero .container .left {
+  flex: 6;
+}
+
+#hero .container .right {
+  flex: 8;
+}
+
+#hero .left .subheading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  opacity: 0;
+  animation: fade-in 0.3s ease-in forwards;
+  animation-delay: 1s;
+}
+
+#hero .left .heading {
+  font-size: 6rem;
+  font-family: var(--montserrat);
+  font-weight: 900;
+}
+
+#hero .left .heading .wrapper {
+  overflow: hidden;
+}
+
+#hero .left .heading .wrapper span {
+  position: relative;
+  bottom: -70px;
+  animation: rise 1s ease-in-out forwards;
+}
+
+@keyframes rise {
+  0% {
+    bottom: -70px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#hero .left .desc {
+  margin-top: 2.5rem;
+  max-width: 400px;
+  font-size: 1.6rem;
+  color: var(--tert-color);
+  opacity: 0;
+  animation: fade-in 0.3s ease-in forwards;
+  animation-delay: 1s;
+}
+
+#hero .left .button {
+  opacity: 0;
+  animation: fade-in 0.3s ease-in forwards;
+  animation-delay: 1s;
+}
+
+#hero .right {
+  text-align: right;
+}
+
+#hero .right img {
+  width: 100%;
+  max-width: 450px;
+  height: 600px;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 9px;
+  }
+
+  #hero .container {
+    flex-direction: column;
+  }
+
+  #hero .container .right {
+    text-align: center;
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+
+  #hero .container .right img {
+    width: 100%;
+    height: 400px;
+  }
+
+  #hero .container .left {
+    text-align: center;
+    padding-right: 0;
+    flex: 1;
+    height: fit-content;
+  }
+
+  #hero .left .button {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  #hero .container .right {
+    flex: 6;
+  }
+}
