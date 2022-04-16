@@ -2,10 +2,11 @@
 
 /* Variables */
 :root {
-  --primary-color: #afd5aa;
-  --secondary-color: #12100e;
+  --primary-color: #86A8E7;
+  --secondary-color: #151F31;
   --tert-color: #403d39;
-  --bg-color: #f0f2ef;
+  --bg-color: #efeff2;
+  --alert: #A89BFF;
 
   --mono: "Roboto Mono", sans-serif;
   --montserrat: "Montserrat", sans-serif;
@@ -27,6 +28,7 @@ html {
 
 body {
   background-color: var(--bg-color);
+  position: relative;
 }
 
 img {
@@ -49,11 +51,17 @@ a {
   margin-top: 3rem;
   gap: 2rem;
   display: inline-block;
-  background-color: var(--primary-color);
+  background-color: var(--alert);
   color: white;
   font-size: 1.5rem;
-  padding: 15px;
-  border-radius: 20px;
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--alert);
+  border: var(--alert) 2px solid;
 }
 
 section {
@@ -83,8 +91,21 @@ section {
   font-family: var(--montserrat);
   letter-spacing: 0.2rem;
   color: transparent;
-  -webkit-text-stroke: 1.5px var(--primary-color);
+  -webkit-text-stroke: 1.5px var(--alert);
   z-index: -1;
+}
+
+#particles-js {
+  background: var(--bg-color);
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: block;
+  z-index: -2;
 }
 
 /* Hero Section */
@@ -183,6 +204,75 @@ section {
   object-position: 50% 30%;
   border-radius: 15px;
 }
+
+/* Project Section Styles */
+
+#projects {
+  padding: 10rem;
+}
+
+#projects .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 15rem;
+}
+
+#projects .item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+#projects .item .left {
+  flex: 1;
+}
+#projects .item .right {
+  flex: 1;
+  margin-left: -150px;
+  background-color: white;
+  padding: 5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00000028;
+  z-index: 2;
+}
+
+#projects .item:nth-child(even) .right {
+  margin-left: 0;
+}
+
+#projects .item:nth-child(even) .left {
+  margin-left: -150px;
+}
+
+#projects .item .left .img {
+  height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px #00000028;
+  position: relative;
+}
+
+#projects .item .left .img::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #745feb28;
+}
+
+#projects .item .left .img img {
+  object-fit: cover;
+  z-index: 1;
+}
+
+#projects .item .right .lang-icons i{
+  padding-right: 0.5rem;
+  color:#A89BFF;
+}
+
 
 @media only screen and (max-width: 768px) {
   html {

@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>val.</title>
 </head>
 <body>
     <!-- Hero Section -->
     <section id="hero">
+        <div id="particles-js"></div>
         <div class="container">
             <div class="left">
                 <p class="subheading">Hi there,</p>
@@ -22,7 +23,7 @@
                 </h2>
                 <p class="desc">I'm a Front-End Web Developer. </br>Nice to meet you!</p>
                 <div class="button">
-                    <a href="#">Download Resume</a>
+                    <a href="./v-resume.pdf" style="color: white;">Download Resume</a>
                 </div>
             </div>
             <div class="right">
@@ -33,19 +34,83 @@
     <!-- END Hero Section -->
 
     <!-- About Section -->
-    <section id="about">
+    <!--<section id="about">
         <div class="container">
             <h2 class="section-heading" data-outline="About">About</h2>
             <div class="left"></div>
             <div class="right"></div>
         </div>
-    </section>
+    </section>-->
     <!-- END About Section -->
 
     <!-- Projects Section -->
         <section id="projects">
             <div class="container">
                 <h2 class="section-heading" data-outline="Projects">Projects</h2>
+                <div class="all-items">
+                    <div class="item">
+                        <div class="left">
+                            <div class="img">
+                                <img src="./images/image-1.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h2 class="project-title">Poppi Shop</h2>
+                            <h3 class="project-subtitle">eCommerce Landing Page</h3>
+                            <p class="project-description">After being given a web design for an eCommerce landing page, I was then tasked with building the site along with the necessary placeholders. (All placeholder art is
+                            mine and is copyrighted).
+                            </p></br>
+                            <span class="lang-icons" style="font-size: 2.3rem;"><i class="fa-brands fa-html5"></i><i class="fa-brands fa-css3-alt"></i><i class="fa-brands fa-js-square"></i></span>
+                            <div class="buttons">
+                                <a href="https://vgmichel.github.io/poppi-landing-spw/index.html" class="button">Preview</a>
+                                <a href="https://github.com/VGMichel/poppi-landing-spw" class="button outline"><span>Source Code</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="left">
+                            <div class="img">
+                                <img src="./images/image-2.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h2 class="project-title">Dynamic Background Changer</h2>
+                            <h3 class="project-subtitle">EntAsia User Favorite Feature</h3>
+                            <p class="project-description">A user favorite from a previous website that was lost over time. Users have the option of of using the default
+                            backgrounds provided or they had the option of inserting an image of their favorite pattern or image to use as a
+                            background.
+                    
+                            </p></br>
+                            <span class="lang-icons" style="font-size: 2.3rem;"><i class="fa-brands fa-js-square"></i><i class="fa-brands fa-css3-alt"></i><i class="fa-brands fa-html5"></i></span>
+                            <div class="buttons">
+                                <a href="https://vgmichel.github.io/background-changer/index.html" class="button">Preview</a>
+                                <a href="https://github.com/VGMichel/background-changer" class="button outline"><span>Source Code</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="left">
+                            <div class="img">
+                                <img src="./images/image-3.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <h2 class="project-title">Moving Mountains Tutoring and Mentoring Services</h2>
+                            <h3 class="project-subtitle">WebApp Project</h3>
+                            <p class="project-description">For this short-term project, I worked with Wordpress. I designed protoypes and mock ups for tablet and
+                            mobile versions. The design and backend functionality of the navigation and footer i developed by myself and implemented on current site.
+                    
+                            </p></br>
+                            <span class="lang-icons" style="font-size: 2.3rem;"><i class="fa-brands fa-php"></i><i class="fa-brands fa-css3-alt"></i></span>
+                            <div class="buttons">
+                                <a href="https://www.movingmountainstutoring.com/" class="button">View Site</a>
+                                <!--<a href="https://github.com/VGMichel/background-changer" class="button outline"><span>Source Code</span></a>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     <!-- END Projects Section -->
@@ -56,6 +121,8 @@
             <h2 class="section-heading" data-outline="Contact">Contact</h2>
         </div>
     </section>
-    <!-- END Projects Section -->
+    <!-- END Contact Section -->
+    <script src="./js/particles.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
